@@ -10,7 +10,7 @@
 	<form action="" method="get">
 		<table border=1 width=500>
 			<tr>
-				<td>윤한영</td>
+				<td>아이디</td>
 				<td><input type="text" name="name"></td>
 				<td>비밀번호</td>
 				<td><input type="password" name="password"></td>
@@ -19,7 +19,7 @@
 				<td colspan=4><textarea name="message" cols=60 rows=5></textarea></td>
 			</tr>
 			<tr>
-				<td colspan=4 align=right><input type="submit" VALUE="삭제"></td>
+				<td colspan=4 align=right><input type="submit" VALUE="입력"></td>
 			</tr>
 		</table>
 	</form>

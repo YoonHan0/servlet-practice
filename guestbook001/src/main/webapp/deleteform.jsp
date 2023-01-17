@@ -4,7 +4,6 @@
 
 <%
 	request.setCharacterEncoding("utf-8");
-	
 %>
 <!DOCTYPE html>
 <html>
@@ -13,8 +12,8 @@
 <title>방명록 삭제</title>
 </head>
 <body>
-	<form method="post" action="">
-		<input type='hidden' name="no" value="">
+	<form method="post" action="/guestbook001/delete.jsp">
+		<input type='hidden' name="no" value="<%=request.getParameter("no")%>">
 		<table>
 			<tr>
 				<td>비밀번호</td>
@@ -25,6 +24,6 @@
 		</table>
 	</form>
 	<br>
-	<td><a href="/guestbook01">메인으로 돌아가기</a></td>
+	<td><a href="/guestbook001">메인으로 돌아가기</a></td>
 </body>
 </html>
