@@ -38,7 +38,7 @@
 		}
 	%>
 	<p>
-		<a href="emaillist02/el/form.jsp">새메일 등록하기</a>
+		<a href="emaillist02/el/?a=form">새메일 등록하기</a>
 	</p>
 	<br>
 </body>
