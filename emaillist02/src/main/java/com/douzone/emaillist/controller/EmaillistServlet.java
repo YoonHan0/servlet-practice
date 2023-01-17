@@ -22,7 +22,7 @@ public class EmaillistServlet extends HttpServlet {
 		if("form".equals(action)) {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/form.jsp");
 			rd.forward(request, response);
-		}else if("add".equals(action)) {
+		} else if("add".equals(action)) {
 			String firstName = request.getParameter("firstName");
 			String lastName = request.getParameter("lastName");
 			String email = request.getParameter("email");
@@ -31,9 +31,11 @@ public class EmaillistServlet extends HttpServlet {
 			vo.setFirstName(firstName);
 			vo.setLastName(lastName);
 			vo.setEmail(email);
+			
 			new EmaillistDao().insert(vo);
-		} 
-		else {
+			
+			response.sendRedirect("/emaillist02/el");
+		} else {
 			List<EmaillistVo> list = new EmaillistDao().findAll();
 			request.setAttribute("list", list);
 			
@@ -43,8 +45,6 @@ public class EmaillistServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		doGet(request, response);
 	}
-
 }
