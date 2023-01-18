@@ -19,7 +19,7 @@
 	</form>
 	<br>
 	<p>
-	<a href="emaillist01">리스트 바로가기</a>
+	<a href="/emaillist01">리스트 바로가기</a>
 	</p>
 </body>
 </html>
