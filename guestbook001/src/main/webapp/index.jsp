@@ -45,7 +45,7 @@
 				<td><a href="<%=request.getContextPath()%>/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
 			</tr>
 			<tr>
-				<td colspan=4>안녕하세요</td>
+				<td colspan=4><textarea readonly rows=3 cols=70 style = "resize:none; border:none"><%=vo.getMessage() %></textarea></td>
 			</tr>
 		</table>
 	<%
