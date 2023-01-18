@@ -11,10 +11,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>방명록</title>
+<title>방명록</title>
 </head>
 <body>
-	<form action="/guestbook02/gb?a=add" method="post">
+	<!--guestbook02 => request.getContextPath() -->
+	<form action="<%=request.getContextPath() %>/gb?a=add" method="post">
 		<table border=1 width=500>
 			<tr>
 				<td>이름</td>
@@ -42,7 +43,7 @@
 				<td><%=vo.getName() %></td>
 				<td><%=vo.getRegDate() %></td>
  				<!--<input type=hidden name="no" value="<%=vo.getNo()%>"> -->
-				<td><a href="/guestbook02/gb?a=deleteform&&no=<%=vo.getNo()%>">삭제</a></td>
+				<td><a href="<%=request.getContextPath() %>/gb?a=deleteform&&no=<%=vo.getNo()%>">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan=4><textarea readonly rows=3 cols=70 style = "resize:none; border:none"><%=vo.getMessage() %></textarea></td>

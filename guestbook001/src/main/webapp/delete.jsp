@@ -17,6 +17,6 @@
 	
 	new GuestbookDao().delete(vo);
 	
-	response.sendRedirect("/guestbook001"); // /index.jsp
+	response.sendRedirect(request.getContextPath()); // /index.jsp
 	// 여기서 응답을 보냈으므로 아래 html로 응답을 할 필요가 없음
 %>    

@@ -12,10 +12,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>방명록</title>
+<title>방명록</title>
 </head>
 <body>
-	<form action="/guestbook001/add.jsp" method="post">
+	<form action="<%=request.getContextPath()%>/add.jsp" method="post">
 		<table border=1 width=500>
 			<tr>
 				<td>이름</td>
@@ -42,7 +42,7 @@
 				<td><%=i-- %></td>
 				<td><%=vo.getName() %></td>
 				<td><%=vo.getReg_date() %></td>
-				<td><a href="/guestbook001/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
+				<td><a href="<%=request.getContextPath()%>/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan=4>안녕하세요</td>

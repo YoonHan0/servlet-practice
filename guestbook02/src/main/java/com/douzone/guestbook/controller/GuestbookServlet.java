@@ -29,7 +29,7 @@ public class GuestbookServlet extends HttpServlet {
 			
 			new GuestbookDao().deleteByNoAndPassword(Long.parseLong(no), password);
 
-			response.sendRedirect("/guestbook02/gb");
+			response.sendRedirect(request.getContextPath() + "/gb");
 		} else if("add".equals(action)) {
 			String name = request.getParameter("name");
 			String password = request.getParameter("password");
@@ -41,7 +41,7 @@ public class GuestbookServlet extends HttpServlet {
 			vo.setMessage(message);
 			
 			new GuestbookDao().insert(vo);
-			response.sendRedirect("/guestbook02/gb");
+			response.sendRedirect(request.getContextPath() + "/gb");
 		} else {
 			List<GuestbookVo> list = new GuestbookDao().findAll();
 			

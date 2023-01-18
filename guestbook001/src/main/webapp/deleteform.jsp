@@ -9,10 +9,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>방명록 삭제</title>
+<title>방명록 삭제</title>
 </head>
 <body>
-	<form method="post" action="/guestbook001/delete.jsp">
+	<form method="post" action="<%=request.getContextPath()%>/delete.jsp">
 		<input type='hidden' name="no" value="<%=request.getParameter("no")%>">
 		<table>
 			<tr>
@@ -24,6 +24,6 @@
 		</table>
 	</form>
 	<br>
-	<td><a href="/guestbook001">메인으로 돌아가기</a></td>
+	<td><a href="<%=request.getContextPath()%>">메인으로 돌아가기</a></td>
 </body>
 </html>
