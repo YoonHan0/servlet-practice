@@ -36,7 +36,7 @@ public class CookieServlet extends HttpServlet {
 		response.addCookie(cookie);
 		
 		// 화면 출력
-		response.setContentType("text/html; charset=utf)");
+		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		out.println("<h1>방문횟수:" + visitCount + "</h1>");
 	}
