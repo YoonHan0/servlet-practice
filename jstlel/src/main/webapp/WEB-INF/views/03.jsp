@@ -12,8 +12,8 @@
 <body>
 
 	<h1>JSTL Test: forEach</h1>
-	<c:forEach items="${list }" var="vo">
-		${vo.no} : ${vo.name } <br>
+	<c:forEach items="${list }" var="vo" varStatus="status">
+		[${status.index} : {status.count}] ${vo.no} : ${vo.name } <br>
 	</c:forEach>
 </body>
 </html>
