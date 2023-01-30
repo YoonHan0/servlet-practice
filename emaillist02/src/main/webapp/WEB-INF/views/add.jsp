@@ -4,7 +4,7 @@
 <%@page import="com.douzone.emaillist.dao.EmaillistDao"%>
 
 <%
-	request.setCharacterEncoding("utf-8");
+request.setCharacterEncoding("utf-8");
 
 	// 클라이언트에서 action form을 통해 넘어온 데이터 받기
 	String firstName = request.getParameter("firstName");
